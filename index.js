@@ -10,6 +10,7 @@ const initContainer = document.querySelector('.container-initial');
 const homeContainer = document.querySelector('.container-home');
 const searchContainer = document.querySelector('.container-search');
 const loadingContainer = document.querySelector('.container-loader');
+const errorContainer = document.querySelector('.container-error');
 const searchBtn = document.querySelector('.submit');
 const searchBar = document.querySelector('.searchBox');
 const searchResult = document.querySelector('.result');
@@ -18,15 +19,16 @@ current.addEventListener('click', toggleToCurrent);
 search.addEventListener('click', toggleToSearch);
 grant.addEventListener('click', getLocation);
 
-if(getFromSessionStorage){
-    initContainer.classList.remove('cur');
-    getLocation();
-}
+// if(getFromSessionStorage){
+//     initContainer.classList.remove('cur');
+//     getLocation();
+// }
 
 function toggleToCurrent(){
     search.classList.remove('active');
     searchContainer.classList.remove('cur');
     searchResult.classList.remove('cur');
+    errorContainer.classList.remove('cur');
     current.classList.add('active');
     let location = getFromSessionStorage();
     if(location){
@@ -39,6 +41,7 @@ function toggleToCurrent(){
 function toggleToSearch(){
     search.classList.add('active');
     searchContainer.classList.add('cur');
+    errorContainer.classList.remove('cur');
     current.classList.remove('active');
     if(homeContainer.classList.contains('cur')){
         homeContainer.classList.remove('cur');
@@ -84,7 +87,10 @@ async function fetchUserWeatherInfo(coordinates){
     } catch (error) {
        console.log('Error Occured');
        loadingContainer.classList.remove('cur');
-       initContainer.classList.add('cur');
+       searchContainer.classList.remove('cur');
+       homeContainer.classList.remove('cur');
+       initContainer.classList.remove('cur');
+       errorContainer.classList.add('cur');
     }
 }
 
@@ -129,7 +135,10 @@ async function getCityWeather(cityName){
     } catch (error) {
        console.log('Error Occured');
        loadingContainer.classList.remove('cur');
-    //    initContainer.classList.add('cur');
+       searchContainer.classList.remove('cur');
+       homeContainer.classList.remove('cur');
+       initContainer.classList.remove('cur');
+       errorContainer.classList.add('cur');
     }
 }
 

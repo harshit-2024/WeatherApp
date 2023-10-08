@@ -48,7 +48,8 @@
 }
 
 .container{
-    width: 35%;
+    min-width: 35%;
+    width: fit-content;
     /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
