@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1>WEATHER APP</h1>
+
+        <div class="head">
+            <div class="current active">Your Weather</div>
+            <div class="search">Search Weather</div>
+        </div>
+        <div class="container container-initial cur">
+            <div class="main">
+                <img src="./Images/location.png" alt="Location">
+                <div class="info">
+                    <h2>Grant Location Access</h2>
+                    <p>Allow access to get weather information</p>
+                </div>
+                <button class="grant-access">Grant Access</button>
+            </div>
+        </div>
+        
+        
+        <div class="container container-loader">
+            <div class="main">
+                <img src="./Images/loading.gif">
+                <h3>Loading...</h3>
+            </div>
+        </div>
+
+        <div class="container container-home">
+            <div class="main">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+                <!-- <h3 class="city"></h3> -->
+                <p class="desc"></p>
+                <img class="desc-image">
+                <h2 class="temperature"></h2>
+                <div class="details">
+                    <div class="windSpeed detail-card">
+                        <img src="./Images/wind.png" alt="">
+                        <p>WINDSPEED</p>
+                        <p class="wind-speed"></p>
+                    </div>
+                    <div class="humidity detail-card">
+                        <img src="./Images/humidity.png" alt="">
+                        <p>HUMIDITY</p>
+                        <p class="humidity-value"></p>
+                    </div>
+                    <div class="clouds detail-card">
+                        <img src="./Images/cloud.png" alt="">
+                        <p>CLOUDS</p>
+                        <p class="clouds-value"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container container-search">
+            <div class="main">
+                <div class="searchBar">
+                    <input class="searchBox" type="text" placeholder="Search for city...">
+                    <button class="submit">🔍</button>
+                </div>
+            </div>
+            <div class="result">
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+                <!-- <h3 class="city"></h3> -->
+                <p class="desc"></p>
+                <img class="desc-image">
+                <h2 class="temperature"></h2>
+                <div class="details">
+                    <div class="windSpeed detail-card">
+                        <img src="./Images/wind.png" alt="">
+                        <p>WINDSPEED</p>
+                        <p class="wind-speed"></p>
+                    </div>
+                    <div class="humidity detail-card">
+                        <img src="./Images/humidity.png" alt="">
+                        <p>HUMIDITY</p>
+                        <p class="humidity-value"></p>
+                    </div>
+                    <div class="clouds detail-card">
+                        <img src="./Images/cloud.png" alt="">
+                        <p>CLOUDS</p>
+                        <p class="clouds-value"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

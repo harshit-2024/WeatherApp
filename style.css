@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Kanit&family=Prompt&family=Roboto+Condensed:ital,wght@1,300;1,400&display=swap');
+
+:root{
+    --font: 'Prompt', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    overflow: hidden;
+    color: whitesmoke;
+}
+
+
+
+.active{
+    background: rgb(206, 198, 198, 0.6);
+    border-radius: 0.5rem;
+    padding: 0 0.3rem;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgb(40, 40, 138), rgb(115, 115, 194));
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+
+.head{
+    /* border: 1px solid white; */
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.current, .search{
+    cursor: pointer;
+}
+
+.container{
+    width: 35%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* opacity: 0;   */
+    scale: 0;
+    position: absolute;
+    top: 25%;
+}
+
+
+.main{
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.name img{
+    margin: 0 0.2rem;
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.desc-image{
+    width: 4rem;
+    height: 3.5rem;
+}
+
+img{
+    width: 5rem;
+    height: 5rem;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* line-height: 1.2rem; */
+}
+
+.info h2{
+    font-size: 2rem;
+    margin-bottom: -10px;
+}
+
+.info p{
+    font-size: 0.8rem;
+}
+
+.grant-access{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 40%;
+    margin: 1rem;
+    background: rgb(156, 156, 255);
+    border: none;
+    cursor: pointer;
+}
+
+
+/* .city, .status, .stat-image, .temperature{
+    min-height: 1rem;
+    border: 1px solid yellow;
+} */
+
+.details{
+    display: flex;
+    gap: 2rem;
+}
+
+.detail-card{
+    text-align: center;
+    background: rgb(206, 198, 198, 0.6);
+    border-radius: 0.3rem;
+    /* border: 1px solid red; */
+    width: 8rem;
+    height: fit-content;
+}
+
+.searchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.searchBar input{
+    width: 90%;
+    height: 2rem;
+    background: rgb(206, 198, 198, 0.6);
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+}
+
+.searchBar button{
+    width: 10%;
+    height: 2.3rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.result{
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    scale: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.cur{
+    /* opacity: 1; */
+    scale: 1;
+}
