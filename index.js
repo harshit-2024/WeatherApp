@@ -110,7 +110,7 @@ function renderWeatherData(data){
     cityName.textContent = data?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${data?.sys?.country.toLowerCase()}.png`;
     desc.textContent = data?.weather[0]?.description.toUpperCase();
-    descImage.src = `https:/openweathermap.org/img/w/${data?.weather[0]?.icon}.png`;
+    descImage.src = `https://openweathermap.org/img/w/${data?.weather[0]?.icon}.png`;
     temperature.textContent = data?.main?.temp + "°C";
     windSpeed.textContent = data?.wind?.speed;
     humidity.textContent = data?.main?.humidity;
